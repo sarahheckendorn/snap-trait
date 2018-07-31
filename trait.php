@@ -1,6 +1,7 @@
 <?php
 
 class Instrument {
+
 	protected $strings;
 
 	public function __construct(string $newStrings) {
@@ -37,7 +38,6 @@ trait Tuning {
 }
 
 class Violin extends Instrument {
-	use MapleWood;
 
 	protected $maker;
 
@@ -54,3 +54,5 @@ class Violin extends Instrument {
 		$this->maker = $newMaker;
 	}
 }
+
+$stradivarius = new Instrument("Ames Stradivarius, 1734");
