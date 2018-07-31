@@ -37,5 +37,20 @@ trait Tuning {
 }
 
 class Violin extends Instrument {
-	use
+	use MapleWood;
+
+	protected $maker;
+
+	public function __construct(string $newStrings, string $newMaker) {
+		parent::__construct($newStrings);
+		$this->setMaker($newMaker);
+	}
+
+	public function getMaker(): string {
+		return($this->maker);
+	}
+
+	public function setMaker(string $newMaker): void {
+		$this->maker = $newMaker;
+	}
 }
